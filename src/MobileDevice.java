@@ -46,9 +46,9 @@ public abstract class MobileDevice {
     private String os;
     private String deviceType;
 
- //   MobileDevice(String cpu){
- //       this.cpu = cpu;
- //   }
+    MobileDevice(String deviceType, String os, String cpu){
+        this.cpu = cpu;
+    }
 
 
     public abstract void showDeviceInfo();
