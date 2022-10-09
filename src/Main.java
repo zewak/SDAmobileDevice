@@ -2,11 +2,12 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Mobile Device");
 
-        Tablet tablet1 = new Tablet();
-        tablet1.setDeviceType("Samsung tabjakiśtam");
-        tablet1.setOs("Android 8.0");
-        tablet1.setCpu("Snap dragon 750");
-        tablet1.setRamSize(8);
+        Tablet tablet1 = new Tablet("Samsung tabjakiśtam", "Android 8.0", "Snap dragon 750", 6.0f, 4, true);
+
+//        tablet1.setDeviceType("Samsung tabjakiśtam");
+//        tablet1.setOs("Android 8.0");
+//        tablet1.setCpu("Snap dragon 750");
+//        tablet1.setRamSize(8);
         tablet1.setPencilSupport(true);
 
         System.out.println();

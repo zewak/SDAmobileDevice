@@ -1,5 +1,10 @@
 public abstract class MobileDevice {
     private float displaySize;
+    private int ramSize;
+    private String cpu;
+    private String os;
+    private String deviceType;
+
 
     public float getDisplaySize() {
         return displaySize;
@@ -41,14 +46,13 @@ public abstract class MobileDevice {
         this.deviceType = deviceType;
     }
 
-    private int ramSize;
-    private String cpu;
-    private String os;
-    private String deviceType;
-
-   // MobileDevice(String deviceType, String os, String cpu){  // czy to ma sens chyba nie bardzo bo i tak nie można tak robić objektów?
-    //    this.cpu = cpu;
-   // }
+    MobileDevice(String deviceType, String os, String cpu, float displaySize, int ramSize){  // czy to ma sens chyba nie bardzo bo i tak nie można tak robić objektów?
+        this.deviceType = deviceType;
+        this.cpu = cpu;
+        this.os = os;
+        this.displaySize = displaySize;
+        this.ramSize = ramSize;
+    }
 
 
     public abstract void showDeviceInfo();

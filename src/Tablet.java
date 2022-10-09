@@ -1,6 +1,11 @@
 public class Tablet extends MobileDevice{
     private boolean pencilSupport;
 
+    Tablet(String deviceType, String os, String cpu, float displaySize, int ramSize, boolean pencilSupport) {
+        super(deviceType, os, cpu, displaySize, ramSize);
+        this.pencilSupport = pencilSupport;
+    }
+
     public boolean isPencilSupport() {
         return pencilSupport;
     }

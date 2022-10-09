@@ -1,21 +1,21 @@
 public class MobilePhone extends MobileDevice{
-    public boolean isLteSupport() {
-        return lteSupport;
-    }
-
-    public void setLteSupport(boolean lteSupport) {
-        this.lteSupport = lteSupport;
-    }
-
     private boolean lteSupport;
 
+//    public MobilePhone(String deviceType, String os, String cpu, int ramSize, float displaySize, boolean lteSupport) {
+//        this.lteSupport = lteSupport;
+//        setDeviceType(deviceType);
+//        setOs(os);
+//        setCpu(cpu);
+//        setRamSize(ramSize);
+//        setDisplaySize(displaySize);
+//    }
+
     public MobilePhone(String deviceType, String os, String cpu, int ramSize, float displaySize, boolean lteSupport) {
+        super(deviceType, os, cpu, displaySize, ramSize);
         this.lteSupport = lteSupport;
-        setDeviceType(deviceType);
-        setOs(os);
-        setCpu(cpu);
-        setRamSize(ramSize);
-        setDisplaySize(displaySize);
+        //super(deviceType, os, cpu, displaySize, ramSize);
+     //   setRamSize(ramSize);
+     //   setDisplaySize(displaySize);
     }
 
     @Override
@@ -26,5 +26,13 @@ public class MobilePhone extends MobileDevice{
         System.out.println("Rozmiar pamięci RAM: "+getRamSize());
         System.out.println("Rozmiar wyświetlacza: "+getDisplaySize());
         System.out.println("Czy obsługuje LTE: " +isLteSupport());
+    }
+
+    public boolean isLteSupport() {
+        return lteSupport;
+    }
+
+    public void setLteSupport(boolean lteSupport) {
+        this.lteSupport = lteSupport;
     }
 }
